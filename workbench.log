@@ -1,0 +1,264 @@
+(0.001) SELECT "workbench_xblockstate"."id", "workbench_xblockstate"."scope", "workbench_xblockstate"."scope_id", "workbench_xblockstate"."user_id", "workbench_xblockstate"."scenario", "workbench_xblockstate"."tag", "workbench_xblockstate"."created", "workbench_xblockstate"."state" FROM "workbench_xblockstate" WHERE "workbench_xblockstate"."scope" = children  ORDER BY "workbench_xblockstate"."scope_id" ASC, "workbench_xblockstate"."scope" ASC, "workbench_xblockstate"."user_id" ASC; args=('children',)
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 99, in get_response
+    request.path_info)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 317, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 347, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 342, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/videoblock/xblock-sdk/workbench/urls.py", line 11, in <module>
+    init_scenarios()
+  File "/videoblock/xblock-sdk/workbench/scenarios.py", line 71, in init_scenarios
+    WORKBENCH_KVS.prep_for_scenario_loading()
+  File "/videoblock/xblock-sdk/workbench/runtime.py", line 60, in prep_for_scenario_loading
+    XBlockState.prep_for_scenario_loading()
+  File "/videoblock/xblock-sdk/workbench/models.py", line 125, in prep_for_scenario_loading
+    cls.objects.filter(scope="children").delete()
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 513, in delete
+    collector.collect(del_query)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/deletion.py", line 151, in collect
+    reverse_dependency=reverse_dependency)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/deletion.py", line 95, in add
+    if not objs:
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 130, in __nonzero__
+    iter(self).next()
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 118, in _result_iter
+    self._fill_cache()
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 892, in _fill_cache
+    self._result_cache.append(self._iter.next())
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 291, in iterator
+    for row in compiler.results_iter():
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/compiler.py", line 763, in results_iter
+    for rows in self.execute_sql(MULTI):
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/compiler.py", line 818, in execute_sql
+    cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/util.py", line 40, in execute
+    return self.cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/sqlite3/base.py", line 344, in execute
+    return Database.Cursor.execute(self, query, params)
+DatabaseError: no such table: workbench_xblockstate
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 99, in get_response
+    request.path_info)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 317, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 347, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 342, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/videoblock/xblock-sdk/workbench/urls.py", line 11, in <module>
+    init_scenarios()
+  File "/videoblock/xblock-sdk/workbench/scenarios.py", line 71, in init_scenarios
+    WORKBENCH_KVS.prep_for_scenario_loading()
+  File "/videoblock/xblock-sdk/workbench/runtime.py", line 60, in prep_for_scenario_loading
+    XBlockState.prep_for_scenario_loading()
+  File "/videoblock/xblock-sdk/workbench/models.py", line 125, in prep_for_scenario_loading
+    cls.objects.filter(scope="children").delete()
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 513, in delete
+    collector.collect(del_query)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/deletion.py", line 151, in collect
+    reverse_dependency=reverse_dependency)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/deletion.py", line 95, in add
+    if not objs:
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 130, in __nonzero__
+    iter(self).next()
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 118, in _result_iter
+    self._fill_cache()
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 892, in _fill_cache
+    self._result_cache.append(self._iter.next())
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 291, in iterator
+    for row in compiler.results_iter():
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/compiler.py", line 763, in results_iter
+    for rows in self.execute_sql(MULTI):
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/compiler.py", line 818, in execute_sql
+    cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/util.py", line 40, in execute
+    return self.cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/sqlite3/base.py", line 344, in execute
+    return Database.Cursor.execute(self, query, params)
+DatabaseError: no such table: workbench_xblockstate
+(0.000) SELECT "workbench_xblockstate"."id", "workbench_xblockstate"."scope", "workbench_xblockstate"."scope_id", "workbench_xblockstate"."user_id", "workbench_xblockstate"."scenario", "workbench_xblockstate"."tag", "workbench_xblockstate"."created", "workbench_xblockstate"."state" FROM "workbench_xblockstate" WHERE "workbench_xblockstate"."scope" = children  ORDER BY "workbench_xblockstate"."scope_id" ASC, "workbench_xblockstate"."scope" ASC, "workbench_xblockstate"."user_id" ASC LIMIT 21; args=('children',)
+(0.000) SELECT "workbench_xblockstate"."id", "workbench_xblockstate"."scope", "workbench_xblockstate"."scope_id", "workbench_xblockstate"."user_id", "workbench_xblockstate"."scenario", "workbench_xblockstate"."tag", "workbench_xblockstate"."created", "workbench_xblockstate"."state" FROM "workbench_xblockstate" WHERE "workbench_xblockstate"."scope" = children  ORDER BY "workbench_xblockstate"."scope_id" ASC, "workbench_xblockstate"."scope" ASC, "workbench_xblockstate"."user_id" ASC; args=('children',)
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 99, in get_response
+    request.path_info)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 317, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 347, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 342, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/videoblock/xblock-sdk/workbench/urls.py", line 11, in <module>
+    init_scenarios()
+  File "/videoblock/xblock-sdk/workbench/scenarios.py", line 71, in init_scenarios
+    WORKBENCH_KVS.prep_for_scenario_loading()
+  File "/videoblock/xblock-sdk/workbench/runtime.py", line 60, in prep_for_scenario_loading
+    XBlockState.prep_for_scenario_loading()
+  File "/videoblock/xblock-sdk/workbench/models.py", line 125, in prep_for_scenario_loading
+    cls.objects.filter(scope="children").delete()
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 513, in delete
+    collector.collect(del_query)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/deletion.py", line 151, in collect
+    reverse_dependency=reverse_dependency)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/deletion.py", line 95, in add
+    if not objs:
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 130, in __nonzero__
+    iter(self).next()
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 118, in _result_iter
+    self._fill_cache()
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 892, in _fill_cache
+    self._result_cache.append(self._iter.next())
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 291, in iterator
+    for row in compiler.results_iter():
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/compiler.py", line 763, in results_iter
+    for rows in self.execute_sql(MULTI):
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/compiler.py", line 818, in execute_sql
+    cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/util.py", line 40, in execute
+    return self.cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/sqlite3/base.py", line 344, in execute
+    return Database.Cursor.execute(self, query, params)
+DatabaseError: no such table: workbench_xblockstate
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 99, in get_response
+    request.path_info)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 317, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 347, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 342, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/videoblock/xblock-sdk/workbench/urls.py", line 11, in <module>
+    init_scenarios()
+  File "/videoblock/xblock-sdk/workbench/scenarios.py", line 71, in init_scenarios
+    WORKBENCH_KVS.prep_for_scenario_loading()
+  File "/videoblock/xblock-sdk/workbench/runtime.py", line 60, in prep_for_scenario_loading
+    XBlockState.prep_for_scenario_loading()
+  File "/videoblock/xblock-sdk/workbench/models.py", line 125, in prep_for_scenario_loading
+    cls.objects.filter(scope="children").delete()
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 513, in delete
+    collector.collect(del_query)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/deletion.py", line 151, in collect
+    reverse_dependency=reverse_dependency)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/deletion.py", line 95, in add
+    if not objs:
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 130, in __nonzero__
+    iter(self).next()
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 118, in _result_iter
+    self._fill_cache()
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 892, in _fill_cache
+    self._result_cache.append(self._iter.next())
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 291, in iterator
+    for row in compiler.results_iter():
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/compiler.py", line 763, in results_iter
+    for rows in self.execute_sql(MULTI):
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/compiler.py", line 818, in execute_sql
+    cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/util.py", line 40, in execute
+    return self.cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/sqlite3/base.py", line 344, in execute
+    return Database.Cursor.execute(self, query, params)
+DatabaseError: no such table: workbench_xblockstate
+(0.000) SELECT "workbench_xblockstate"."id", "workbench_xblockstate"."scope", "workbench_xblockstate"."scope_id", "workbench_xblockstate"."user_id", "workbench_xblockstate"."scenario", "workbench_xblockstate"."tag", "workbench_xblockstate"."created", "workbench_xblockstate"."state" FROM "workbench_xblockstate" WHERE "workbench_xblockstate"."scope" = children  ORDER BY "workbench_xblockstate"."scope_id" ASC, "workbench_xblockstate"."scope" ASC, "workbench_xblockstate"."user_id" ASC LIMIT 21; args=('children',)
+(0.000) SELECT "workbench_xblockstate"."id", "workbench_xblockstate"."scope", "workbench_xblockstate"."scope_id", "workbench_xblockstate"."user_id", "workbench_xblockstate"."scenario", "workbench_xblockstate"."tag", "workbench_xblockstate"."created", "workbench_xblockstate"."state" FROM "workbench_xblockstate" WHERE "workbench_xblockstate"."scope" = children  ORDER BY "workbench_xblockstate"."scope_id" ASC, "workbench_xblockstate"."scope" ASC, "workbench_xblockstate"."user_id" ASC; args=('children',)
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 99, in get_response
+    request.path_info)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 317, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 347, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 342, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/videoblock/xblock-sdk/workbench/urls.py", line 11, in <module>
+    init_scenarios()
+  File "/videoblock/xblock-sdk/workbench/scenarios.py", line 71, in init_scenarios
+    WORKBENCH_KVS.prep_for_scenario_loading()
+  File "/videoblock/xblock-sdk/workbench/runtime.py", line 60, in prep_for_scenario_loading
+    XBlockState.prep_for_scenario_loading()
+  File "/videoblock/xblock-sdk/workbench/models.py", line 125, in prep_for_scenario_loading
+    cls.objects.filter(scope="children").delete()
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 513, in delete
+    collector.collect(del_query)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/deletion.py", line 151, in collect
+    reverse_dependency=reverse_dependency)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/deletion.py", line 95, in add
+    if not objs:
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 130, in __nonzero__
+    iter(self).next()
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 118, in _result_iter
+    self._fill_cache()
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 892, in _fill_cache
+    self._result_cache.append(self._iter.next())
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 291, in iterator
+    for row in compiler.results_iter():
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/compiler.py", line 763, in results_iter
+    for rows in self.execute_sql(MULTI):
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/compiler.py", line 818, in execute_sql
+    cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/util.py", line 40, in execute
+    return self.cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/sqlite3/base.py", line 344, in execute
+    return Database.Cursor.execute(self, query, params)
+DatabaseError: no such table: workbench_xblockstate
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 99, in get_response
+    request.path_info)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 317, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 347, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 342, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/videoblock/xblock-sdk/workbench/urls.py", line 11, in <module>
+    init_scenarios()
+  File "/videoblock/xblock-sdk/workbench/scenarios.py", line 71, in init_scenarios
+    WORKBENCH_KVS.prep_for_scenario_loading()
+  File "/videoblock/xblock-sdk/workbench/runtime.py", line 60, in prep_for_scenario_loading
+    XBlockState.prep_for_scenario_loading()
+  File "/videoblock/xblock-sdk/workbench/models.py", line 125, in prep_for_scenario_loading
+    cls.objects.filter(scope="children").delete()
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 513, in delete
+    collector.collect(del_query)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/deletion.py", line 151, in collect
+    reverse_dependency=reverse_dependency)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/deletion.py", line 95, in add
+    if not objs:
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 130, in __nonzero__
+    iter(self).next()
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 118, in _result_iter
+    self._fill_cache()
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 892, in _fill_cache
+    self._result_cache.append(self._iter.next())
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 291, in iterator
+    for row in compiler.results_iter():
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/compiler.py", line 763, in results_iter
+    for rows in self.execute_sql(MULTI):
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/compiler.py", line 818, in execute_sql
+    cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/util.py", line 40, in execute
+    return self.cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/sqlite3/base.py", line 344, in execute
+    return Database.Cursor.execute(self, query, params)
+DatabaseError: no such table: workbench_xblockstate
+(0.000) SELECT "workbench_xblockstate"."id", "workbench_xblockstate"."scope", "workbench_xblockstate"."scope_id", "workbench_xblockstate"."user_id", "workbench_xblockstate"."scenario", "workbench_xblockstate"."tag", "workbench_xblockstate"."created", "workbench_xblockstate"."state" FROM "workbench_xblockstate" WHERE "workbench_xblockstate"."scope" = children  ORDER BY "workbench_xblockstate"."scope_id" ASC, "workbench_xblockstate"."scope" ASC, "workbench_xblockstate"."user_id" ASC LIMIT 21; args=('children',)

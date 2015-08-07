@@ -1,0 +1,8 @@
+simplevideo.py
+xblock_simplevideo.egg-info/PKG-INFO
+xblock_simplevideo.egg-info/SOURCES.txt
+xblock_simplevideo.egg-info/dependency_links.txt
+xblock_simplevideo.egg-info/entry_points.txt
+xblock_simplevideo.egg-info/pbr.json
+xblock_simplevideo.egg-info/requires.txt
+xblock_simplevideo.egg-info/top_level.txt
