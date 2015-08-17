@@ -19,7 +19,7 @@ django-admin.py compilemessages
 
 Открываем файл `edx-platform/requirements/edx/github.txt`
 
-Находим строчку (может отличаться, но в ней должно быть влождение "ora2" )
+Находим строчку (может отличаться, но в ней должно быть вxождение "ora2" )
 
 `-e git+https://github.com/edx/edx-ora2.git@release-2015-07-14T11.10#egg=edx-ora2`
 
@@ -27,7 +27,7 @@ django-admin.py compilemessages
 
 `-e git+https://github.com/[account]/edx-ora2.git@[hash/release]#egg=edx-ora2`
 
-hash/release - `название хеша коммита или релиза
+hash/release - `хеш коммита или название релиза
 
 Далее устанавливаем именно наш ora2:
 
