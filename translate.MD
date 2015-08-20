@@ -36,6 +36,7 @@ hash/release - `хеш коммита или название релиза
 
 `sudo /edx/app/edxapp/venvs/edxapp/bin/pip install git+https://github.com/[account]/edx-ora2`
 
+Так же надо заменить файлы в `openassessment/xblock/static/xml/`
 
 ##Перевод форума
 Делаем переменную окружения
